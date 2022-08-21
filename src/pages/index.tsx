@@ -1,7 +1,11 @@
 import type { NextPage } from 'next';
+import { Header } from 'src/components';
 
 const Home: NextPage = () => (
-  <main className='text-3xl font-bold text-center'>RMDB</main>
+  <main className='relative h-screen overflow-y-scroll'>
+    <Header />
+    RMDB
+  </main>
 );
 
 export default Home;

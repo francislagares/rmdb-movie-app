@@ -1,3 +1,5 @@
+import { IMovies } from 'src/types';
+
 export const genericFetch = async <returnType>(
   endpoint: string,
 ): Promise<returnType> => {
@@ -8,4 +10,8 @@ export const genericFetch = async <returnType>(
   const data = await response.json();
 
   return data;
+};
+
+export const fetchMovies = async (search = '', page = 1): Promise<IMovies> => {
+  return await genericFetch(`/api/movies?search=${search}&page=${page}`);
 };

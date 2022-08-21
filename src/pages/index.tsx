@@ -1,11 +1,21 @@
 import type { NextPage } from 'next';
+import { useState } from 'react';
 import { Header } from 'src/components';
 
-const Home: NextPage = () => (
-  <main className='relative h-screen overflow-y-scroll'>
-    <Header />
-    RMDB
-  </main>
-);
+import { useFetchMovies } from '../hooks/fetchHooks';
+
+const Home: NextPage = () => {
+  const [query, setQuery] = useState('');
+
+  const { data, fetchNextPage, isLoading, isFetching, error } =
+    useFetchMovies(query);
+
+  return (
+    <main className='relative h-screen overflow-y-scroll'>
+      <Header />
+      RMDB
+    </main>
+  );
+};
 
 export default Home;

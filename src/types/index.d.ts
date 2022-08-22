@@ -20,3 +20,7 @@ export interface IMovies {
   total_pages: number;
   total_results: number;
 }
+
+export interface ISearch {
+  setQuery: React.Dispatch<React.SetStateAction<string>>;
+}

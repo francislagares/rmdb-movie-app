@@ -1,4 +1,3 @@
-import { time } from 'console';
 import Image from 'next/image';
 import searchLogo from 'public/tmdb-logo.svg';
 import React, { useRef, useState } from 'react';

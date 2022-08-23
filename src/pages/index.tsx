@@ -1,10 +1,11 @@
 import type { NextPage } from 'next';
 import noImage from 'public/no_image.jpg';
 import { useState } from 'react';
-import { Header, Hero } from 'src/components';
+import { Grid, Header, Hero } from 'src/components';
 
 import { BACKDROP_SIZE, IMAGE_BASE_URL, POSTER_SIZE } from '../config/config';
 import { useFetchMovies } from '../hooks/fetchHooks';
+import { IMovie } from '../types';
 
 const Home: NextPage = () => {
   const [query, setQuery] = useState('');
@@ -29,6 +30,22 @@ const Home: NextPage = () => {
           text={data?.pages[0].results[0].overview}
         />
       ) : null}
+      <Grid
+        className='p-4 max-w7xl m-auto'
+        title={
+          query
+            ? `Search Results: ${data?.pages[0].total_results}`
+            : 'Popular Movies'
+        }
+      >
+        {data && data.pages
+          ? data.pages.map(page =>
+              page.results.map((movie: IMovie) => (
+                <div key={movie.id}>{movie.original_title}</div>
+              )),
+            )
+          : null}
+      </Grid>
     </main>
   );
 };

@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 import noImage from 'public/no_image.jpg';
 import { useState } from 'react';
-import { Grid, Header, Hero } from 'src/components';
 
-import { BACKDROP_SIZE, IMAGE_BASE_URL, POSTER_SIZE } from '../config/config';
-import { useFetchMovies } from '../hooks/fetchHooks';
-import { IMovie } from '../types';
+import { Grid, Header, Hero } from '@/components';
+import { BACKDROP_SIZE, IMAGE_BASE_URL, POSTER_SIZE } from '@/config';
+import { useFetchMovies } from '@/hooks/fetchHooks';
+import { IMovie } from '@/types';
 
 const Home: NextPage = () => {
   const [query, setQuery] = useState('');

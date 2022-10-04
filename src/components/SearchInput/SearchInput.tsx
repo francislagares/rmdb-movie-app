@@ -2,7 +2,7 @@ import Image from 'next/image';
 import searchLogo from 'public/tmdb-logo.svg';
 import React, { useRef, useState } from 'react';
 
-import { ISearch } from '@/src/types';
+import { ISearch } from '@/types';
 
 const TIME = 300; // ms
 

@@ -1,4 +1,4 @@
-import { IMovies } from 'src/types';
+import { IMovies } from '@/types';
 
 export const genericFetch = async <returnType>(
   endpoint: string,

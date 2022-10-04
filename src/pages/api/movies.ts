@@ -1,7 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { POPULAR_BASE_URL, SEARCH_BASE_URL } from 'src/config/config';
-import { genericFetch } from 'src/services/fetchService';
-import { IMovies } from 'src/types/';
+
+import { POPULAR_BASE_URL, SEARCH_BASE_URL } from '@/config';
+import { genericFetch } from '@/services/fetchService';
+import { IMovies } from '@/types/';
 
 export default async function handler(
   req: NextApiRequest,

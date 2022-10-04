@@ -11,7 +11,7 @@ const customJestConfig = {
   // to prevent non-test files from being interpreted as test files
   testRegex: '\\.test\\.[jt]sx?$',
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   moduleDirectories: ['node_modules', '<rootDir>/'],
   testEnvironment: 'jest-environment-jsdom',

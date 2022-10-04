@@ -1,8 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { render, renderHook, waitFor } from '@testing-library/react';
-import Home from 'src/pages/index';
+import { renderHook, waitFor } from '@testing-library/react';
 
-import { useFetchMovies } from '@/src/hooks/fetchHooks';
+import { useFetchMovies } from '@/hooks/fetchHooks';
 
 interface IChildren {
   children: React.ReactNode;

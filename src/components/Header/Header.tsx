@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from 'public/rmdb-logo.svg';
 import logoSmall from 'public/rmdb-logo-small.svg';
-import { SearchInput } from 'src/components';
 
-import { ISearch } from '@/src/types';
+import { SearchInput } from '@/components';
+import { ISearch } from '@/types';
 
 const Header = ({ setQuery }: ISearch) => {
   return (
